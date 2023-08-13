@@ -7,7 +7,7 @@ const router = Router();
 
 router.get('/products/car/:id', authenticate, addProductToCar);
 router.post('/products/car/order',authenticate, buyProductsInCar)
-router.get('/car/:id',  getAllProductsInCar);
+router.get('/car/:id', authenticate,  getAllProductsInCar);
 router.put('/order/:id',authenticate, completedOrder)
 
 module.exports = router;
